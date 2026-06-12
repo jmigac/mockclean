@@ -107,13 +107,63 @@ Input:
 ```json
 {
   "jcr:primaryType": "cq:Page",
+  "jcr:created": "2026-06-12T09:00:00.000+02:00",
+  "jcr:createdBy": "admin",
   "jcr:content": {
     "jcr:primaryType": "cq:PageContent",
     "jcr:title": "Join us",
-    "cq:template": "/conf/cyber64/settings/wcm/templates/page-content",
-    "sling:resourceType": "cyber64/components/page"
+    "cq:template": "/conf/juricamigac/settings/wcm/templates/page-content",
+    "sling:resourceType": "juricamigac/components/page",
+    "jcr:created": "2026-06-12T09:00:00.000+02:00",
+    "jcr:createdBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "layout": "responsiveGrid",
+      "sling:resourceType": "juricamigac/components/container",
+      "jcr:created": "2026-06-12T09:01:00.000+02:00",
+      "jcr:createdBy": "admin",
+      "jcr:lastModified": "2026-06-12T10:10:00.000+02:00",
+      "jcr:lastModifiedBy": "jurica.migac",
+      "container": {
+        "jcr:primaryType": "nt:unstructured",
+        "layout": "responsiveGrid",
+        "sling:resourceType": "juricamigac/components/container",
+        "cq:lastModified": "2026-06-12T10:11:00.000+02:00",
+        "cq:lastModifiedBy": "jurica.migac",
+        "title": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "juricamigac/components/title",
+          "jcr:created": "2026-06-12T09:02:00.000+02:00",
+          "jcr:createdBy": "admin",
+          "jcr:lastModified": "2026-06-12T10:12:00.000+02:00",
+          "jcr:lastModifiedBy": "jurica.migac"
+        },
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "juricamigac/components/container",
+          "cq:lastModified": "2026-06-12T10:13:00.000+02:00",
+          "cq:lastModifiedBy": "jurica.migac",
+          "carousel": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "juricamigac/components/carousel/v1/carousel",
+            "jcr:created": "2026-06-12T09:03:00.000+02:00",
+            "jcr:createdBy": "admin",
+            "cq:lastModified": "2026-06-12T10:14:00.000+02:00",
+            "cq:lastModifiedBy": "jurica.migac",
+            "jcr:lastModified": "2026-06-12T10:14:00.000+02:00",
+            "jcr:lastModifiedBy": "jurica.migac",
+            "cq:lastPublished": "2026-06-12T10:31:00.000+02:00",
+            "cq:lastPublishedBy": "jurica.migac",
+            "cq:lastReplicated": "2026-06-12T10:31:00.000+02:00",
+            "cq:lastReplicatedBy": "jurica.migac"
+          }
+        }
+      }
+    }
   }
 }
+
 ```
 
 Output:
@@ -122,9 +172,36 @@ Output:
 {
   "jcr:primaryType": "cq:Page",
   "jcr:content": {
-    "jcr:title": "Join us"
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:title": "Join us",
+    "cq:template": "/conf/juricamigac/settings/wcm/templates/page-content",
+    "sling:resourceType": "juricamigac/components/page",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "layout": "responsiveGrid",
+      "sling:resourceType": "juricamigac/components/container",
+      "container": {
+        "jcr:primaryType": "nt:unstructured",
+        "layout": "responsiveGrid",
+        "sling:resourceType": "juricamigac/components/container",
+        "title": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "juricamigac/components/title"
+        },
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "juricamigac/components/container",
+          "carousel": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "juricamigac/components/carousel/v1/carousel"
+          }
+        }
+      }
+    }
   }
 }
+
 ```
 
 ## Notes

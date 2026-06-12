@@ -1,0 +1,16 @@
+{
+  "jcr:content": {
+    "jcr:title": "Join us",
+    "root": {
+      "layout": "responsiveGrid",
+      "container": {
+        "layout": "responsiveGrid",
+        "title": {},
+        "container": {
+          "layout": "responsiveGrid",
+          "downloadComponent": {}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:title": "Join us",
+    "cq:template": "/conf/juricamigac/settings/wcm/templates/page-content",
+    "sling:resourceType": "juricamigac/components/page",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "layout": "responsiveGrid",
+      "sling:resourceType": "juricamigac/components/container",
+      "container": {
+        "jcr:primaryType": "nt:unstructured",
+        "layout": "responsiveGrid",
+        "sling:resourceType": "juricamigac/components/container",
+        "title": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "juricamigac/components/title"
+        },
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "layout": "responsiveGrid",
+          "sling:resourceType": "juricamigac/components/container",
+          "blogArticleEventDownload": {
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:lastModifiedBy": "jurica.migac",
+            "sling:resourceType": "juricamigac/components/blogArticleEventDownload/v1/blogArticleEventDownload"
+          }
+        }
+      }
+    }
+  }
+}

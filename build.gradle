@@ -1,0 +1,50 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij.platform' version '2.16.0'
+}
+
+group = 'hr.from.juricamigac'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    intellijPlatform {
+        defaultRepositories()
+    }
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.11.0'
+    testImplementation 'junit:junit:4.13.2'
+
+    intellijPlatform {
+        intellijIdea '2025.1.4.1'
+    }
+}
+
+intellijPlatform {
+    pluginConfiguration {
+        name = 'MockClean AEM'
+        version = project.version
+
+        ideaVersion {
+            sinceBuild = '251'
+        }
+
+        changeNotes = '''
+            Initial release: recursively removes configured AEM metadata keys from the currently opened JSON file.
+        '''.stripIndent().trim()
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    sourceCompatibility = '21'
+    targetCompatibility = '21'
+    options.encoding = 'UTF-8'
+}

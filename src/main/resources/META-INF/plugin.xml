@@ -1,0 +1,56 @@
+<idea-plugin>
+    <id>hr.from.juricamigac.mockclean</id>
+    <name>MockClean AEM</name>
+    <version>1.0.0</version>
+    <vendor email="jurica1.migac@gmail.com">Jurica Migač</vendor>
+
+    <idea-version since-build="251"/>
+
+    <description><![CDATA[
+        <p><strong>MockClean AEM</strong> is an IntelliJ IDEA plugin for cleaning AEM mock JSON files.</p>
+        <p>Keep your AEM JSON mocks focused on what your tests actually need.</p>
+        <p>It removes configured metadata properties such as:</p>
+        <ul>
+            <li><code>jcr:created</code></li>
+            <li><code>jcr:createdBy</code></li>
+            <li><code>cq:lastModified</code></li>
+        </ul>
+       <p><strong>Features</strong></p>
+       <ul>
+           <li>Recursively cleans nested JSON objects and arrays</li>
+           <li>Preserves the rest of the document structure</li>
+           <li>Supports custom cleanup rules from plugin settings</li>
+           <li>Works directly on the current editor file</li>
+      </ul>
+      <p><strong>Usage</strong></p>
+      <ol>
+          <li>Open a JSON file in the editor.</li>
+          <li>Run <code>Tools | Clean MockClean AEM JSON</code>.</li>
+          <li>Review the cleaned file and save if needed.</li>
+      </ol>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        Initial release: added recursive cleanup for AEM unit-test JSON mocks, configurable metadata keys through IntelliJ Settings, default AEM system-property presets, and Keymap support for assigning the cleanup action to a custom shortcut.
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceImplementation="hr.from.juricamigac.mockclean.settings.AemJsonCleanerSettings"/>
+        <applicationConfigurable parentId="tools"
+                                 instance="hr.from.juricamigac.mockclean.settings.AemJsonCleanerConfigurable"
+                                 id="hr.from.juricamigac.mockclean.settings"
+                                 displayName="MockClean AEM"/>
+        <notificationGroup id="MockClean AEM" displayType="BALLOON"/>
+    </extensions>
+
+    <actions>
+        <action id="AemJsonCleaner.CleanCurrentJson"
+                class="hr.from.juricamigac.mockclean.action.CleanCurrentJsonAction"
+                text="Clean MockClean AEM JSON"
+                description="Remove configured AEM metadata properties from the current JSON file">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>

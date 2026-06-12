@@ -83,6 +83,10 @@ You can also restore the default property list from the settings panel.
 2. Search for `Clean MockClean AEM JSON`.
 3. Assign any shortcut you prefer.
 
+## How it looks in action
+<img width="800" height="911" alt="readme" src="https://github.com/user-attachments/assets/d6ae6dd9-b91d-464a-b1b9-bc579b98c3fa" />
+
+
 ## Development
 
 ### Run tests
